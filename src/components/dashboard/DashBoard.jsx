@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { DashboardLayout } from './DashBoardLayout';
+import { DataTable } from './DataTable';
 
 export default function DashboardPage() {
   const router = useNavigate();

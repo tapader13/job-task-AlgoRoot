@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import './App.css';
 import Home from './components/HomePage';
-import { DashboardLayout } from './components/dashboard/DashBoard';
+import DashboardPage from './components/dashboard/DashBoard';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -9,7 +9,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <DashboardLayout />,
+    element: <DashboardPage />,
   },
 ]);
 function App() {
