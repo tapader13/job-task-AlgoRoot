@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
-export function LoginForm() {
+export function Login() {
   const router = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -74,7 +74,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
       {loginError && (
-        <div className='rounded-md bg-red-50 p-3 text-sm text-red-500'>
+        <div className='rounded-md  bg-red-50 p-3 text-sm text-red-500'>
           <div className='flex'>
             <div className='flex-shrink-0'>
               <svg
