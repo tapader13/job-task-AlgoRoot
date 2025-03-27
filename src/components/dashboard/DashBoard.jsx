@@ -13,7 +13,7 @@ export default function DashboardPage() {
     // Check if user is logged in
     const user = localStorage.getItem('user');
     if (!user) {
-      router.push('/');
+      router('/');
     }
   }, [router]);
 
