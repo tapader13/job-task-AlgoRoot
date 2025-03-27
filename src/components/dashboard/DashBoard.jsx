@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { DashboardLayout } from './DashBoardLayout';
 import { DataTable } from './DataTable';
+import { AuthContextUser } from '../../context/AuthContext';
 
 export default function DashboardPage() {
   const router = useNavigate();
   const [isClient, setIsClient] = useState(false);
-
+  const { user } = useContext(AuthContextUser);
   useEffect(() => {
     setIsClient(true);
 
     // Check if user is logged in
-    const user = localStorage.getItem('user');
     if (!user) {
       router('/');
     }
-  }, [router]);
+  }, [router, user]);
 
   if (!isClient) {
     return null; // Prevent hydration errors

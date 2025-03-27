@@ -61,7 +61,7 @@ export function Navbar() {
         <div className='relative' ref={menuRef}>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className='flex h-8 w-8 items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300'
+            className='flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -91,7 +91,7 @@ export function Navbar() {
 
               <button
                 onClick={handleLogout}
-                className='flex w-full items-center px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100'
+                className='flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -114,7 +114,7 @@ export function Navbar() {
 
               <button
                 onClick={() => setIsDeleteDialogOpen(true)}
-                className='flex w-full items-center px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100'
+                className='flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-red-600 hover:bg-gray-100'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -150,7 +150,7 @@ export function Navbar() {
               <div className='mt-4 flex justify-end space-x-2'>
                 <button
                   onClick={() => setIsDeleteDialogOpen(false)}
-                  className='rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50'
+                  className='rounded-md cursor-pointer border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50'
                 >
                   Cancel
                 </button>
@@ -159,7 +159,7 @@ export function Navbar() {
                     handleDeleteAccount();
                     setIsDeleteDialogOpen(false);
                   }}
-                  className='rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700'
+                  className='rounded-md cursor-pointer bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700'
                 >
                   Delete Account
                 </button>

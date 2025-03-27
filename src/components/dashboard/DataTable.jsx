@@ -381,7 +381,7 @@ export function DataTable() {
                 <button
                   key={pageNumber}
                   onClick={() => setCurrentPage(pageNumber)}
-                  className={`inline-flex h-8 w-8 items-center justify-center rounded-md ${
+                  className={`inline-flex cursor-pointer h-8 w-8 items-center justify-center rounded-md ${
                     currentPage === pageNumber
                       ? 'bg-blue-500 text-white'
                       : 'border border-gray-300 bg-white text-gray-500 hover:bg-gray-50'

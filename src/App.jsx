@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import './App.css';
 import Home from './components/HomePage';
 import DashboardPage from './components/dashboard/DashBoard';
+import AuthProvider from './context/AuthContext';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -15,7 +16,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </>
   );
 }

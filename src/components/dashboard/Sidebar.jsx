@@ -8,7 +8,7 @@ export function Sidebar() {
   };
 
   return (
-    <div className='hidden w-64 flex-shrink-0 border-r bg-white md:block'>
+    <div className='hidden w-64 flex-shrink-0 border-r bg-white lg:block'>
       <div className='flex h-full flex-col'>
         <div className='flex-1 overflow-auto py-2'>
           <nav className='grid items-start px-2 text-sm font-medium'>
