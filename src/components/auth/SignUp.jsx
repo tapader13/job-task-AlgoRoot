@@ -62,6 +62,7 @@ export function SignUp() {
 
       if (userExists) {
         setSignupError('User with this email already exists');
+        setIsLoading(false);
         return;
       }
 
@@ -86,13 +87,13 @@ export function SignUp() {
           email: newUser.email,
         })
       );
-
-      // Redirect to dashboard
-      router('/dashboard');
+      setTimeout(() => {
+        setIsLoading(false); // Stop loading before navigating
+        router('/dashboard'); // Navigate after 3 seconds
+      }, 3000);
     } catch (error) {
       setSignupError('An unexpected error occurred');
       console.error(error);
-    } finally {
       setIsLoading(false);
     }
   };
