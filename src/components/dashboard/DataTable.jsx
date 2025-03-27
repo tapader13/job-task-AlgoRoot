@@ -207,7 +207,7 @@ export function DataTable() {
               >
                 <button
                   onClick={() => handleSort('title')}
-                  className='flex items-center gap-1 font-medium'
+                  className='flex cursor-pointer items-center gap-1 font-medium'
                 >
                   Title
                   <svg
@@ -230,7 +230,7 @@ export function DataTable() {
               >
                 <button
                   onClick={() => handleSort('priority')}
-                  className='flex items-center gap-1 font-medium'
+                  className='flex cursor-pointer items-center gap-1 font-medium'
                 >
                   Priority
                   <svg
@@ -253,7 +253,7 @@ export function DataTable() {
               >
                 <button
                   onClick={() => handleSort('completed')}
-                  className='flex items-center gap-1 font-medium'
+                  className='flex cursor-pointer items-center gap-1 font-medium'
                 >
                   Status
                   <svg
