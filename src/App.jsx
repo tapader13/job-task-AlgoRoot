@@ -1,9 +1,15 @@
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import './App.css';
-
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <div>Hello World</div>,
+  },
+]);
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <RouterProvider router={router} />
     </>
   );
 }
