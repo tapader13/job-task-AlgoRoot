@@ -1,14 +1,36 @@
-import { Navbar } from '@/components/layout/navbar';
-import { Sidebar } from '@/components/layout/sidebar';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
+import { DashboardLayout } from './DashBoardLayout';
 
-export function DashboardLayout({ children }) {
+export default function DashboardPage() {
+  const router = useNavigate();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+
+    // Check if user is logged in
+    const user = localStorage.getItem('user');
+    if (!user) {
+      router.push('/');
+    }
+  }, [router]);
+
+  if (!isClient) {
+    return null; // Prevent hydration errors
+  }
+
   return (
-    <div className='flex h-screen flex-col'>
-      <Navbar />
-      <div className='flex flex-1 overflow-hidden'>
-        <Sidebar />
-        <main className='flex-1 overflow-y-auto bg-gray-50 '>{children}</main>
+    <DashboardLayout>
+      <div className='flex flex-col gap-4 p-4 md:p-8'>
+        <div>
+          <h1 className='text-2xl font-bold tracking-tight'>Details</h1>
+          <p className='text-gray-500 dark:text-gray-400'>
+            View and manage your data
+          </p>
+        </div>
+        <DataTable />
       </div>
-    </div>
+    </DashboardLayout>
   );
 }
