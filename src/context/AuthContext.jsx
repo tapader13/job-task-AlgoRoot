@@ -8,12 +8,12 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   // Load user info from localStorage on initial load
-  useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
+  //   useEffect(() => {
+  //     const storedUser = localStorage.getItem('user');
+  //     if (storedUser) {
+  //       setUser(JSON.parse(storedUser));
+  //     }
+  //   }, []);
 
   return (
     <AuthContextUser.Provider value={{ user }}>

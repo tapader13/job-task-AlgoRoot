@@ -7,7 +7,8 @@ import { AuthContextUser } from '../../context/AuthContext';
 export default function DashboardPage() {
   const router = useNavigate();
   const [isClient, setIsClient] = useState(false);
-  const { user } = useContext(AuthContextUser);
+  //   const { user } = useContext(AuthContextUser);
+  const user = localStorage.getItem('user');
   useEffect(() => {
     setIsClient(true);
 
